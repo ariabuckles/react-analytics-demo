@@ -1,0 +1,41 @@
+{
+  "name": "analytics-project",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "aphrodite": "^2.1.1",
+    "chart.js": "^2.7.2",
+    "moment": "^2.22.0",
+    "qs": "^6.5.1",
+    "react": "^16.3.1",
+    "react-chartjs-2": "^2.7.0",
+    "react-dates": "^16.5.0",
+    "react-dom": "^16.3.1",
+    "react-scripts": "1.1.4",
+    "react-select": "^1.2.1",
+    "react-tabs": "^2.2.1"
+  },
+  "scripts": {
+    "start": "concurrently -k 'BROWSER=none REACT_EDITOR=none react-scripts start' 'nodemon src/server/app.js -w src/server -w src/update-stats' -n 'webpack,server/app.js' -c 'gray.dim,magenta'",
+    "build": "react-scripts build",
+    "test": "mocha --exit src/test",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:3001",
+  "devDependencies": {
+    "ajv": "^6.4.0",
+    "body-parser": "^1.18.2",
+    "concurrently": "^3.5.1",
+    "express": "^4.16.3",
+    "express-async-handler": "^1.1.3",
+    "mocha": "^5.1.0",
+    "morgan": "^1.9.0",
+    "node-fetch": "^2.1.2",
+    "nodemon": "^1.17.3",
+    "pg": "^7.4.1",
+    "pm2": "^2.10.2",
+    "prettier": "^1.12.1",
+    "useragent": "^2.3.0",
+    "uuid": "^3.2.1"
+  }
+}
